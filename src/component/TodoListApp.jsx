@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function TodoListApp() {
   const [todo, setTodo] = useState([]);
@@ -33,9 +33,9 @@ export default function TodoListApp() {
   };
   return (
     <>
-      <div className="flex justify-center items-center  w-full h-[100vh]">
-        <div className="w-[370px] sm:w-[450px] rounded-lg sm:h-[550px] h-[480px] px-5 bg-red-100 overflow-y-hidden">
-          <p className="font-bold text-2xl border-b-[1px] border-gray-300 pt-4 pb-1">
+      <div className="flex justify-center items-center bg-gradient-to-bl from-sky-500 to-indigo-500  w-full h-[100vh]">
+        <div className="w-[370px] sm:w-[500px] rounded-lg sm:h-[550px] h-[480px] px-8 bg-white overflow-y-hidden">
+          <p className="font-bold text-3xl border-b-[1px] border-gray-300 pt-10 pb-3">
             Todo
           </p>
           <div className="flex items-center gap-2">
@@ -46,10 +46,10 @@ export default function TodoListApp() {
               onChange={(e) => {
                 setTask(e.target.value);
               }}
-              className="my-3 text-xs h-7 w-full px-2 bg-gray-100"
+              className="my-3  h-10 w-full px-2 bg-gray-100"
             />
             <button
-              className=" bg-blue-500 h-7 w-8 font-semibold text-gray-200"
+              className=" bg-blue-500 h-10 w-10 font-semibold text-2xl text-gray-200"
               onClick={handleSubmit}
             >
               +
