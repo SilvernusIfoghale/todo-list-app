@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import checked from "../../public/check.png";
+import unChecked from "../../public/uncheck.png";
+import trash from "../../public/trash.png";
 
 export default function TodoListApp() {
   const [todo, setTodo] = useState([]);
