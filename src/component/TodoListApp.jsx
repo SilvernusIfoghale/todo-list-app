@@ -1,6 +1,22 @@
 import React from "react";
 
 export default function TodoListApp() {
+  const [todo, setTodo] = useState([]);
+  const [task, setTask] = useState("");
+
+  const handleSubmit = () => {
+    if (task == "") {
+      alert("Please enter a task");
+    } else {
+      const newTask = {
+        id: Date.now(),
+        task: task,
+        isComplete: false,
+      };
+      setTodo((currentTodo) => [...currentTodo, newTask]);
+    }
+  };
+
   return (
     <>
       <div className="flex justify-center items-center  w-full h-[100vh]">
