@@ -16,7 +16,17 @@ export default function TodoListApp() {
       setTodo((currentTodo) => [...currentTodo, newTask]);
     }
   };
-
+  const handleComplete = (id) => {
+    setTodo((currentTodo) =>
+      currentTodo.map((task) => {
+        if (task.id === id) {
+          return { ...task, isComplete: !task.isComplete };
+        } else {
+          return task;
+        }
+      })
+    );
+  };
   return (
     <>
       <div className="flex justify-center items-center  w-full h-[100vh]">
