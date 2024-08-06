@@ -4,16 +4,6 @@
 A simple todo-list application, user types an input checklist, then submit it, individual checklist could be there after maked as completed or getting rid off. 
 
 
-## Documentation
-
-[Documentation](https://linktodocumentation)
-
-
-## Screenshots
-
-![App Screenshot](https://drive.google.com/file/d/1PaiM886DefzQqPrZ-w2bi5cvEtZ2OG8M/view?usp=sharing)
-
-
 ## Demo
 
 [Click Here](https://todo-list-app-silver.vercel.app/)
