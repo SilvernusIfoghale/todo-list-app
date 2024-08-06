@@ -27,6 +27,10 @@ export default function TodoListApp() {
       })
     );
   };
+  const handleDelete = (id) => {
+    const newTodo = todo.filter((task) => task.id != id);
+    setTodo(newTodo);
+  };
   return (
     <>
       <div className="flex justify-center items-center  w-full h-[100vh]">
