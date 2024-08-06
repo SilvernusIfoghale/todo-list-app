@@ -17,6 +17,7 @@ export default function TodoListApp() {
         isComplete: false,
       };
       setTodo((currentTodo) => [...currentTodo, newTask]);
+      setTask("");
     }
   };
   const handleComplete = (id) => {
@@ -37,7 +38,7 @@ export default function TodoListApp() {
   return (
     <>
       <div className="flex justify-center items-center bg-gradient-to-bl from-sky-500 to-indigo-500  w-full h-[100vh]">
-        <div className="w-[370px] sm:w-[500px] rounded-lg sm:h-[550px] h-[480px] px-8 bg-white overflow-y-hidden">
+        <div className="w-[370px] sm:w-[500px] rounded-lg sm:h-[550px] h-[480px] px-8 bg-white overflow-y-auto">
           <p className="font-bold text-3xl border-b-[1px] border-gray-300 pt-10 pb-3">
             Todo
           </p>
@@ -60,7 +61,7 @@ export default function TodoListApp() {
           </div>
           {todo.map((myTodo, index) => {
             return (
-              <div className="flex gap-1 items-center my-4" key={index}>
+              <div className="flex gap-1 items-center my-5" key={index}>
                 <span className="w-6 h-6">
                   <img
                     onClick={() => {
@@ -72,7 +73,7 @@ export default function TodoListApp() {
                   />
                 </span>
                 <p
-                  className="text-[1rem] font-semibold capitalize flex-1"
+                  className="text-[1rem] font-semibold flex-1"
                   style={{
                     textDecoration: myTodo.isComplete && "line-through",
                     color: myTodo.isComplete && "#9ca3af",
